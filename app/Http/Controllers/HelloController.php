@@ -9,6 +9,6 @@ class HelloController extends Controller
     public function index($name = 'Everybody')
     {
         $data = ['name' => $name];
-        return view('home.index');
+        return view('hello.index',$data);
     }
 }

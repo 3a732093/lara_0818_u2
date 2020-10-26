@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
- Route::get('home',[\App\Http\Controllers\HomeController::class,'index']);
+Route::get('home',[\App\Http\Controllers\HomeController::class,'index']);
 
-Route::get('hello/{name?}',['as'=>'hello.index','uses'=>
-    'HelloController@index']);
 
+
+Route::get('hello/{name?}',[\App\Http\Controllers\HelloController::class,'index'])->name('hello.index');
